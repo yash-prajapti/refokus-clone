@@ -67,16 +67,16 @@ function Section3() {
             <div className="slides-flex">
               <div className="slide-left">
                 <div className="slide-cc-01">
-                  <img src={item.img1} alt={item.alt} />
+                  <img src={item.img1} alt={item.alt} loading='lazy'/>
                 </div>
                 <div className="slide-cc-02">
-                  <img src={item.img2} alt={item.alt} />
+                  <img src={item.img2} alt={item.alt} loading='lazy'/>
                 </div>
               </div>
               <div className="slide-right">
                 <div className="slide-cc-03">
                   <div className="slide-video">
-                    <video muted autoPlay playsInline loop width="100%">
+                    <video muted autoPlay playsInline loop width="100%" loading='lazy'>
                       <source src={item.video} type={item.videoType} />
                       " Your browser does not support the video tag. "
                     </video>
