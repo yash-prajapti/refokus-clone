@@ -1,5 +1,4 @@
-import React, { useRef } from 'react'
-import { TweenMax } from 'gsap/gsap-core';
+import React, { useEffect, useRef } from 'react'
 import { gsap } from 'gsap';
 
 
@@ -10,18 +9,29 @@ function Section1() {
     const container = containerRef.current;
     const relX = e.pageX - container.offsetLeft;
     const relY = e.pageY - container.offsetTop;
-    TweenMax.to(target, 1, {
-      x:
-        ((relX - container.offsetWidth / 2) / container.offsetWidth) * movement,
-      y:
-        ((relY - container.offsetHeight / 2) / container.offsetHeight) *
-        movement,
+    gsap.to(target, {
+      duration: 1,
+      x: ((relX - container.offsetWidth / 2) / container.offsetWidth) * movement,
+      y: ((relY - container.offsetHeight / 2) / container.offsetHeight) * movement,
     });
   };
   const handleMouseMove = (e) => {
-    // parallaxIt(e, ".slide", -10);
-    parallaxIt(e, ".sec1-bg-img", -30);
+    // Apply parallax effect only if viewport width is greater than 775 pixels
+    if (window.innerWidth > 775) {
+      parallaxIt(e, ".sec1-bg-img", -30);
+    }
   };
+  useEffect(() => {
+    const container = containerRef.current;
+    if (container) {
+      container.addEventListener('mousemove', handleMouseMove);
+    }
+    return () => {
+      if (container) {
+        container.removeEventListener('mousemove', handleMouseMove);
+      }
+    };
+  }, []);
   return (
     <>
     {/* section 1 ------------------------------*/}
@@ -29,7 +39,7 @@ function Section1() {
         onMouseMove={handleMouseMove}>
 
         {/*parallax bg image */}
-        <div className="sec1-bg-img">  
+        <div className="sec1-bg-img" style={{backgroundImage:`url('arrowbg.jpg')`}}>  
           <div className="gradient-overlay"></div>
         </div>
 

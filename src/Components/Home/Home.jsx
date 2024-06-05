@@ -14,7 +14,7 @@ function Home() {
     const assets = {
       images: [
         // section 1 bg
-        'arrowbg.png',
+        'arrowbg.jpg',
 
         // section 2 marquee
         'https://assets-global.website-files.com/6334198f239547d0f9cd84b3/65b2d275e12177716cb3f2ea_basf.svg',
