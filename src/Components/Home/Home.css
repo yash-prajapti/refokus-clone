@@ -323,7 +323,20 @@
     margin-right: 4em;
     max-width: 8em;
   }
+  .slides-flex {
+    display: flex;
+    flex-direction: column;
+  }
   .slide-left{
+    padding-top: 3.1em;
+    padding-right: 0;
+    max-width: 100%;
+    width: 100%;
+  }
+  .slide-cc-01{
+    display: none;
+  }
+  .slide-cc-03{
     display: none;
   }
   .slide-right{
