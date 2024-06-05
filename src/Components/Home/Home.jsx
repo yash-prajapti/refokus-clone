@@ -38,17 +38,17 @@ function Home() {
       ],
       videos: [
         // slide 1
-        // 'Arqitel project.webm',
+        'Arqitel project.webm',
         // slide 2
-        // 'Cula.mp4',
+        'Cula.mp4',
         // slide 3
-        // 'webflow.mp4',
+        'webflow.mp4',
         // slide 4
-        // 'refokus3.webm',
+        'refokus3.webm',
         // slide 5
-        // 'maniv.mp4',
+        'maniv.mp4',
         // slide 6
-        // 'Silvr.webm',
+        'Silvr.webm',
       ],
     };
     preloadAssets(assets).then(() => {
