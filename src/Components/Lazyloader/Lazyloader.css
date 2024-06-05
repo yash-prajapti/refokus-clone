@@ -12,9 +12,18 @@
     display: flex;
     justify-content: center;
     align-items: center;
-   
+   flex-direction: column;
+   gap: 10px;
 }
-
+.loader-text{
+    color: rgb(102, 102, 102);
+}
+.loader-rs{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    flex-direction: column-reverse;
+}
 @media (max-width: 975px){
     .experiment-title {
         font-size: 15vw !important;
