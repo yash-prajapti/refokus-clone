@@ -76,7 +76,6 @@ function Section3() {
               <div className="slide-right">
                 <div className="slide-cc-03">
                   <div className="slide-video">
-                  <div className="placeholder" style={{ backgroundColor: '#f0f0f0', height: '100%', width: '100%' }}></div>
                     <video muted autoPlay playsInline loop width="100%" loading='lazy'>
                       <source src={item.video} type={item.videoType} />
                       " Your browser does not support the video tag. "
