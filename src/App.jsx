@@ -1,12 +1,12 @@
-import React from "react";
-import Navbar from "./Components/Navbar/Navbar";
-import Routing from "./utils/Routing";
+import React, { lazy } from "react";
 import { Outlet } from "react-router-dom";
 import './index.css'
-import Mouseflw from "./Components/Mouse-follower/Mouseflw";
+import Footer from "./Components/Footer/Footer";
+const Navbar = lazy(() => import('./Components/Navbar/Navbar'))
+const Routing = lazy(() => import('./utils/Routing'))
+const Mouseflw = lazy(() => import('./Components/Mouse-follower/Mouseflw'))
 
 function App() {
- 
   return (
     <div className="main-container bg-black ">
       <Mouseflw />
@@ -17,6 +17,9 @@ function App() {
         <Routing />
         <Outlet />
       </main>
+      <footer>
+        <Footer />
+      </footer>
     </div>
   );
 }

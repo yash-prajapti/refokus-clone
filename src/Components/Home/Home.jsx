@@ -1,16 +1,17 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useLayoutEffect, useState } from "react";
 import "./Home.css";
 import Lazyloader from "../Lazyloader/Lazyloader";
 import { preloadAssets } from '/src/utils/PreloadAssets';
 import Section1 from "./Section-1/Section1";
 import Section2 from "./Section-2/Section2";
 import Section3 from "./Section-3/Section3";
-
+import Section4 from "./Section-4/Section4";
+import Section5 from "./Section-5/Section5";
 function Home() {
 
   // For preload assets
   const [loading, setLoading] = useState(true);
-  useEffect(() => {
+  useLayoutEffect(() => {
     const assets = {
       images: [
         // section 1 bg
@@ -38,17 +39,21 @@ function Home() {
       ],
       videos: [
         // slide 1
-        'Arqitel project.webm',
+        'Arqitel project.mp4',
         // slide 2
         'Cula.mp4',
         // slide 3
         'webflow.mp4',
         // slide 4
-        'refokus3.webm',
+        'refokus3.mp4',
         // slide 5
         'maniv.mp4',
         // slide 6
-        'Silvr.webm',
+        'Silvr.mp4',
+
+        // Section 4 slides video
+        'people-short.mp4'
+
       ],
     };
     preloadAssets(assets).then(() => {
@@ -59,12 +64,15 @@ function Home() {
   }, []);
 
   return (<>
-    <Lazyloader name={'home'} loadingState={loading} />
-
+    <Lazyloader name={'home'} 
+    // loadingState={loading} 
+    />
     <div className="home-container">
       <Section1 />
       <Section2 />
       <Section3 />
+      <Section4 />
+      <Section5 />
     </div>
   </>
   );

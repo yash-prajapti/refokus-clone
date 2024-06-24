@@ -90,6 +90,7 @@
   color: white;
 }
 .text-left h1 {
+  transition: all 1s ease;
   font-size: 8em;
   line-height: 0.9;
   font-weight: 500;
@@ -98,6 +99,7 @@
   max-width: 28em;
 }
 .text-right p {
+  transition: all 1s ease;
   font-size: 1.1em;
   line-height: 1.5;
   font-weight: 400;
@@ -190,7 +192,7 @@
   display: flex;
   align-items: end;
 }
-.slide-left{
+.slide-left {
   max-width: 50%;
   padding-top: 2em;
   padding-right: 1em;
@@ -205,39 +207,167 @@
   position: relative;
   overflow: hidden;
   border-radius: 5px;
-  transition: all .5s;
-
+  transition: all 0.5s;
 }
 
-.slide-cc-02{
+.slide-cc-02 {
   overflow: hidden;
   border-radius: 5px;
 }
 
-.slide-right{
+.slide-right {
   padding-left: 1em;
   max-width: 50%;
 }
-.slide-cc-03{
+.slide-cc-03 {
   overflow: hidden;
   border-radius: 5px;
   margin-bottom: 15px;
 }
 
-.slide-testimonial{
+.slide-testimonial {
   padding: 1.2em 2em;
   color: white;
 }
-.slide-testimonial .tl-title{
+.slide-testimonial .tl-title {
   font-size: 1.1em;
   font-weight: 500;
   margin-bottom: 15px;
 }
-.slide-testimonial .tl-desc{
+.slide-testimonial .tl-desc {
   font-size: 1.3em;
   font-weight: 400;
   margin-bottom: 20px;
 }
+
+.section3-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* Section 4 ----------------------------------------------------------------- */
+/* --------------------------------------------------------------------------- */
+
+.newsinsight-container {
+  min-height: 100dvh;
+  width: 100%;
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1em;
+  padding-right: 1em;
+  padding-top: 2em;
+  padding-bottom: 2em;
+  position: relative;
+}
+.ns-row-01,
+.ns-row-02 {
+  position: relative; /* Ensure relative positioning for parallax effect */
+}
+.ns-row-01 {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+.ns-content {
+  max-width: 50%;
+  color: white;
+  position: relative;
+  z-index: 1;
+}
+.ns-content h1 {
+  display: flex;
+  flex-direction: column;
+  font-size: 11em;
+  line-height: 0.9;
+  text-align: right;
+  font-weight: 500;
+  padding-bottom: 0.4em;
+}
+.ns-content h1 span:last-child {
+  position: relative;
+  left: 140px;
+  z-index: 0;
+}
+.ns-content p {
+  display: flex;
+  flex-direction: column;
+  font-size: 1.3em;
+  position: relative;
+  left: 150px;
+}
+.insight-btn {
+  position: relative;
+  left: 150px;
+}
+.ns-row-02 {
+  display: flex;
+  justify-content: end;
+  margin-top: 3em;
+  padding: 2em 3em;
+}
+.ns-list-pr {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+}
+.ns-video-01 {
+  max-width: 50%;
+  margin-top: -34em;
+  transition: transform 0.9s ease;
+}
+.ns-video {
+  border-radius: 10px;
+  overflow: hidden;
+}
+.ns-video video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.ns-video-desc {
+  color: white;
+  padding: 0.3em 0.2em;
+  font-size: 1.2em;
+}
+
+.ns-img-02 {
+  max-width: 40%;
+  margin-right: auto;
+  transition: transform 0.9s ease;
+}
+.ns-img-02 .ns-img {
+  height: 27rem;
+  overflow: hidden;
+  border-radius: 10px;
+}
+.ns-img-02 .ns-img img,
+.ns-img-03 .ns-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.ns-img-03 {
+  max-width: 49%;
+  margin-top: -3em;
+  transition: transform 0.9s ease;
+}
+.ns-img-03 .ns-img {
+  height: 18rem;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.ns-desc {
+  color: white;
+  padding: 0.3em 0.2em;
+  font-size: 1.2em;
+}
+
+
 /* Media query ----------------------------------------------------------------- */
 /* ----------------------------------------------------------------------------- */
 
@@ -288,6 +418,13 @@
     width: 300px;
     height: 215px;
   }
+  
+  .ns-video-01 {
+    margin-top: 0em;
+  }
+  .ns-img-03 {
+    margin-top: 0em;
+  }
 }
 @media (max-width: 975px) {
   .marquee-logo {
@@ -297,7 +434,7 @@
     width: 300px;
     height: 200px;
   }
-  .slide-testimonial{
+  .slide-testimonial {
     padding: 1em 1em;
   }
 }
@@ -305,6 +442,34 @@
   .slide-cc-01 {
     width: auto;
     height: auto;
+  }
+  .ns-content {
+    max-width: 100%;
+  }
+  .ns-content h1 {
+    font-size: 22vw;
+    text-align: left;
+  }
+  .ns-content h1 span:last-child {
+    left: 0px;
+  }
+  .ns-content p {
+    left: 0px;
+  }
+  .insight-btn {
+    left: 0px;
+  }
+  .ns-list-pr {
+    align-items: center;
+  }
+  .ns-video-01 {
+    margin-bottom: 3em;
+  }
+  .ns-img-02 {
+    margin-bottom: 6em;
+  }
+  .ns-img-03 {
+    margin-left: auto;
   }
 }
 @media (max-width: 775px) {
@@ -327,37 +492,59 @@
     display: flex;
     flex-direction: column;
   }
-  .slide-left{
+  .slide-left {
     padding-top: 3.1em;
     padding-right: 0;
     max-width: 100%;
     width: 100%;
   }
-  .slide-cc-01{
+  .slide-cc-01 {
     display: none;
   }
-  .slide-cc-03{
+  .slide-cc-03 {
     display: none;
   }
-  .slide-right{
+  .slide-right {
     max-width: 100%;
     padding-left: 0;
     padding-top: 2.5em;
   }
-  .slide-testimonial{
+  .slide-testimonial {
     padding: 0;
   }
-  .slide-testimonial .tl-title{
+  .slide-testimonial .tl-title {
     margin-bottom: 10px;
   }
-  .slide-testimonial .tl-desc{
+  .slide-testimonial .tl-desc {
     font-size: 1em;
     margin-bottom: 10px;
+  }
+  .ns-row-02 {
+    padding: 2em 1em;
+}
+  .ns-video-01 {
+    max-width: 60%;
+  }
+  .ns-img-02 {
+    max-width: 60%;
+    margin-bottom: 8em;
+  }
+  .ns-img-03 {
+    max-width: 60%;
   }
 }
 @media (max-width: 675px) {
   .text-left h1 {
     font-size: 6em;
+  }
+  .ns-video-01 {
+    max-width: 70%;
+  }
+  .ns-img-02 {
+    max-width: 70%;
+  }
+  .ns-img-03 {
+    max-width: 75%;
   }
 }
 @media (max-width: 575px) {
@@ -376,14 +563,34 @@
     max-width: 7em;
   }
   .slide {
-  background-size: 100px;
+    background-size: 100px;
   }
-  .slide-testimonial .tl-title{
+  .slide-testimonial .tl-title {
     font-size: 1em;
   }
-  .slide-testimonial .tl-desc{
+  .slide-testimonial .tl-desc {
     font-size: 0.9em;
   }
+  .ns-content p {
+    font-size: 1em;
+  }
+  .ns-video-01 {
+    max-width: 80%;
+  }
+  .ns-img-02 {
+    max-width: 80%;
+    margin-right: 0;
+    }
+    .ns-img-03 {
+    margin-left: 0;
+    max-width: 85%;
+  }
+  .ns-img-03 .ns-img {
+    height: 14rem;
+}
+.ns-desc {
+  font-size: 1em;
+}
 }
 @media (max-width: 475px) {
   .text-left h1 {
@@ -398,9 +605,30 @@
   .slide {
     background-position: 16px 16px;
   }
+  .ns-row-02 {
+    padding: 2em 0em;
+}
+  .ns-video-01 {
+    max-width: 90%;
+  }
+  .ns-img-02 {
+    max-width: 90%;
+    }
+    .ns-img-03 {
+    max-width: 95%;
+  }
 }
 @media (max-width: 375px) {
   .text-left h1 {
     font-size: 3em;
+  }
+  .ns-video-01 {
+    max-width: 99%;
+  }
+  .ns-img-02 {
+    max-width: 99%;
+    }
+    .ns-img-03 {
+    max-width: 99%;
   }
 }

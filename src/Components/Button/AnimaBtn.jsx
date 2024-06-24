@@ -2,7 +2,7 @@ import React from "react";
 import "./AnimaBtn.css";
 import { BsArrowReturnRight } from "react-icons/bs";
 
-function AnimaBtn({ btnText }) {
+function AnimaBtn({ btnText = 'Get Started' }) {
   return (
     <button>
       <div className="anima-btn">

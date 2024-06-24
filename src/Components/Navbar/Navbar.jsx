@@ -39,6 +39,7 @@ function Navbar() {
             { name: "Home", to: "/" },
             { name: "Work", to: "/work" },
             { name: "About", to: "/about" },
+            { name: "News", to: "/news" },
           ].map((item, index) => (
             <NavLink
               to={item.to}

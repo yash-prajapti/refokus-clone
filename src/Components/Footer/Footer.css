@@ -1,0 +1,128 @@
+.footer-container-cc{
+    width: 100%;
+    max-width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1em 0.5em ;
+  }
+  
+  .footer-cc-01{
+    display: flex;
+    gap: 3px;
+    height: 400px;
+    width: 100%;
+    color: white;
+    }
+    
+  .footer-contact{
+    background-color: #29292E;
+    height: 100%;
+    padding: .9em;
+    border-radius: 13px;
+    transition: all 0.2s ease;
+    overflow: hidden;
+    }
+    .footer-contact:first-child:hover{
+      background-color: #39393f;
+      padding: .9em 1.1em;
+    }
+    .footer-contact-diff:hover{
+      background-color: #3636ca !important;
+      padding: .9em 1.1em;
+    }
+    .contact-lhs{
+    height: 100%;
+    width: 30%;
+    }
+    .contact-rhs{
+    height: 100%;
+    width: 70%;
+  }
+  
+  .f-blocks-cc{
+    height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 20px;
+  }
+  
+  .f-title{
+    display: flex;
+    justify-content: space-between;
+  }
+  .f-desc h3{
+    display: flex;
+    flex-direction: column;
+    font-size: 1.7em;
+    font-weight: bold;
+  }
+  .f-work-name,.f-bText{
+    margin-top: auto;
+  }
+  .f-work-name p{
+    display: flex;
+    flex-direction: column;
+  }
+  .f-bText{
+    font-size: 6em;
+    font-weight: 600;
+  }
+  .footer-cc-black-02{
+    padding: 1em 0;
+    color: rgb(141, 141, 141);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  @media (max-width: 1920px) {}
+@media (max-width: 1875px) {}
+@media (max-width: 1775px) {}
+@media (max-width: 1675px) {}
+@media (max-width: 1575px) {}
+@media (max-width: 1475px) {}
+@media (max-width: 1375px) {
+    .footer-cc-01{
+        height: 300px;
+        }
+        .f-bText{
+            font-size: 5em;
+          }
+}
+@media (max-width: 1275px) {
+    .f-bText{
+        font-size: 4.5em;
+      }
+}
+@media (max-width: 1175px) {}
+@media (max-width: 1075px) {
+    .footer-cc-01{
+        flex-direction: column;
+        }
+    .f-bText{
+        font-size: 4em;
+      }
+      .footer-cc-01 {
+        height: auto;
+    }
+    .footer-contact{
+        height: 300px;
+    }
+    .contact-lhs, .contact-rhs{
+        width: 100%;
+    }
+        
+}
+@media (max-width: 975px) {}
+@media (max-width: 875px) {}
+@media (max-width: 775px) {}
+@media (max-width: 675px) {
+    .f-desc h3{
+        font-size: 1.3em;
+      }
+      .f-work-name p{
+        font-size: .9em;
+      }
+}
+@media (max-width: 575px) {}
+@media (max-width: 475px) {}

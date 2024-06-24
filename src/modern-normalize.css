@@ -47,6 +47,7 @@ Sections
 */
 
 body {
+	overscroll-behavior: none;
 	margin: 0; /* Remove the margin in all browsers. */
 	background-color: black;
 }

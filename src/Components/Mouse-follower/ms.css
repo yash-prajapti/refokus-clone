@@ -10,7 +10,7 @@
     z-index: 2147483647;
     mix-blend-mode: difference;
   }
-
+  
   @media (max-width: 1075px) {
     .flair {
       display: none;

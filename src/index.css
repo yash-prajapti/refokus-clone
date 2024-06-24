@@ -2,21 +2,30 @@
 @tailwind components;
 @tailwind utilities;
 
-.main-container{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    min-height: 100vh;
-    overflow: hidden;
+.main-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  overflow: hidden;
 }
 
-header{
-    width: 100%;
+header {
+  width: 100%;
 }
 
-main{
-    width: 100%;
-    min-height: 100vh;
+main {
+  width: 100%;
+  min-height: 100vh;
+}
+
+footer {
+  width: 100%;
+  height: auto;
+}
+.nav-link:hover .flair{
+  width: .8em;
+  height: .8em;
 }
 
 /* @media (max-width: 1920px) {}
