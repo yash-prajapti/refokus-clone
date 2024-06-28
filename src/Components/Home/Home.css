@@ -193,6 +193,7 @@
   align-items: end;
 }
 .slide-left {
+  width: 100%;
   max-width: 50%;
   padding-top: 2em;
   padding-right: 1em;
@@ -209,20 +210,39 @@
   border-radius: 5px;
   transition: all 0.5s;
 }
+.slide-cc-01 .image-blur{
+  transition: all 0.5s;
+}
 
 .slide-cc-02 {
+  width: 100%;
+  max-height: 21rem;
   overflow: hidden;
   border-radius: 5px;
 }
 
 .slide-right {
-  padding-left: 1em;
+  width: 100%;
   max-width: 50%;
+  padding-left: 1em;
 }
 .slide-cc-03 {
   overflow: hidden;
   border-radius: 5px;
   margin-bottom: 15px;
+  height: clamp(15rem,30vw,27rem);
+}
+
+.slide-video {
+  width: 100%;
+  height: 100%;
+  /* max-height: 32rem; */
+}
+.slide-video video{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
 }
 
 .slide-testimonial {
@@ -367,7 +387,6 @@
   font-size: 1.2em;
 }
 
-
 /* Media query ----------------------------------------------------------------- */
 /* ----------------------------------------------------------------------------- */
 
@@ -418,7 +437,7 @@
     width: 300px;
     height: 215px;
   }
-  
+
   .ns-video-01 {
     margin-top: 0em;
   }
@@ -439,10 +458,6 @@
   }
 }
 @media (max-width: 875px) {
-  .slide-cc-01 {
-    width: auto;
-    height: auto;
-  }
   .ns-content {
     max-width: 100%;
   }
@@ -521,7 +536,7 @@
   }
   .ns-row-02 {
     padding: 2em 1em;
-}
+  }
   .ns-video-01 {
     max-width: 60%;
   }
@@ -580,17 +595,17 @@
   .ns-img-02 {
     max-width: 80%;
     margin-right: 0;
-    }
-    .ns-img-03 {
+  }
+  .ns-img-03 {
     margin-left: 0;
     max-width: 85%;
   }
   .ns-img-03 .ns-img {
     height: 14rem;
-}
-.ns-desc {
-  font-size: 1em;
-}
+  }
+  .ns-desc {
+    font-size: 1em;
+  }
 }
 @media (max-width: 475px) {
   .text-left h1 {
@@ -607,14 +622,14 @@
   }
   .ns-row-02 {
     padding: 2em 0em;
-}
+  }
   .ns-video-01 {
     max-width: 90%;
   }
   .ns-img-02 {
     max-width: 90%;
-    }
-    .ns-img-03 {
+  }
+  .ns-img-03 {
     max-width: 95%;
   }
 }
@@ -627,8 +642,8 @@
   }
   .ns-img-02 {
     max-width: 99%;
-    }
-    .ns-img-03 {
+  }
+  .ns-img-03 {
     max-width: 99%;
   }
 }

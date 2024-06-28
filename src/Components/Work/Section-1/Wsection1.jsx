@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { useGSAP } from "@gsap/react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import ImageBlurhash from "../../../utils/ImageBlurhash/ImageBlurhash";
+
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -9,37 +11,43 @@ const Wsection1 = () => {
 
     const [images, setImages] = useState([
         {
-            url: "https://assets-global.website-files.com/6334198f239547d0f9cd84b3/634ef09178195ce0073e38f3_Refokus%20Tools-1.png",
+            img: 'w1.png',
+            imgSmall: 'w1-small.png',
             top: "50%",
             left: "50%",
             isActive: true,
         },
         {
-            url: "https://assets-global.website-files.com/6334198f239547d0f9cd84b3/634ef0accfe1b3e66bc55462_Refokus%20Tools.png",
+            img: 'w2.png',
+            imgSmall: 'w2-small.png',
             top: "56%",
             left: "44%",
             isActive: false,
         },
         {
-            url: "https://assets-global.website-files.com/6334198f239547d0f9cd84b3/634ef0acbc45cb2f4fc5c6b2_Yahoo.png",
+            img: 'w3.png',
+            imgSmall: 'w3-small.png',
             top: "45%",
             left: "56%",
             isActive: false,
         },
         {
-            url: "https://assets-global.website-files.com/6334198f239547d0f9cd84b3/634ef092455ce2cf591e52d1_Rainfall.png",
+            img: 'w4.png',
+            imgSmall: 'w4-small.png',
             top: "60%",
             left: "53%",
             isActive: false,
         },
         {
-            url: "https://assets-global.website-files.com/6334198f239547d0f9cd84b3/634ef0ac7e7179d210dc41f0_Summon.png",
+            img: 'w5.png',
+            imgSmall: 'w5-small.png',
             top: "43%",
             left: "40%",
             isActive: false,
         },
         {
-            url: "https://assets-global.website-files.com/6334198f239547d0f9cd84b3/634ef0af108a465002975acd_Showcase%20Websites%20(1).png",
+            img: 'w6.png',
+            imgSmall: 'w6-small.png',
             top: "65%",
             left: "55%",
             isActive: false,
@@ -132,16 +140,15 @@ const Wsection1 = () => {
                 <p className="subheading">Web Design, Webflow Development, Creative Development</p>
                 <div className="images-container">
                     {images.map(
-                        (elem, index) =>
-                            elem.isActive && (
-                                <img
-                                    className="image"
-                                    src={elem.url}
+                        (item, index) =>
+                            item.isActive && (
+                                <div className="image"
                                     key={index}
-                                    style={{ top: elem.top, left: elem.left }}
-                                    alt="work"
-                                    loading="lazy"
-                                />
+                                    style={{ top: item.top, left: item.left }}
+                                >
+                                    <ImageBlurhash className='image' src={item.img} alt={'alt'}
+                                        srcSmall={item.imgSmall} key={index} />
+                                </div>
                             )
                     )}
                 </div>

@@ -1,12 +1,14 @@
-import React, { useEffect, useLayoutEffect, useState } from "react";
+import React, { Suspense, lazy, useEffect, useLayoutEffect, useState } from "react";
 import "./Home.css";
-import Lazyloader from "../Lazyloader/Lazyloader";
 import { preloadAssets } from '/src/utils/PreloadAssets';
-import Section1 from "./Section-1/Section1";
-import Section2 from "./Section-2/Section2";
-import Section3 from "./Section-3/Section3";
-import Section4 from "./Section-4/Section4";
-import Section5 from "./Section-5/Section5";
+import Lazyloader from "../Lazyloader/Lazyloader";
+import ComponentLoader from "../Lazyloader/ComponentLoader";
+const Section1 = lazy(() => import('./Section-1/Section1'))
+const Section2 = lazy(() => import("./Section-2/Section2"))
+const Section3 = lazy(() => import('./Section-3/Section3'))
+const Section4 = lazy(() => import('./Section-4/Section4'))
+const Section5 = lazy(() => import('./Section-5/Section5'))
+
 function Home() {
 
   // For preload assets
@@ -16,63 +18,37 @@ function Home() {
       images: [
         // section 1 bg
         'arrowbg.jpg',
-
-        // Section 3 slides images
-        // slide 1
-        'aruitel1.jpeg',
-        'aruitel2.jpeg',
-        // slide 2
-        'cula1.png',
-        'cula2.png',
-        // slide 3
-        'webflow.png',
-        'webflow2.png',
-        // slide 4
-        'refokus1.jpg',
-        'refokus2.jpg',
-        // slide 5
-        'maniv.png',
-        'maniv2.png',
-        // slide 6
-        'silvr.jpg',
-        'silvr2.jpg',
       ],
-      videos: [
-        // slide 1
-        'Arqitel project.mp4',
-        // slide 2
-        'Cula.mp4',
-        // slide 3
-        'webflow.mp4',
-        // slide 4
-        'refokus3.mp4',
-        // slide 5
-        'maniv.mp4',
-        // slide 6
-        'Silvr.mp4',
-
-        // Section 4 slides video
-        'people-short.mp4'
-
+      videos:[
       ],
     };
     preloadAssets(assets).then(() => {
-      setLoading(false);
+      setLoading(!loading);
     }).catch((error) => {
       console.error('Failed to load assets:', error);
     });
   }, []);
 
   return (<>
-    <Lazyloader name={'home'} 
-    // loadingState={loading} 
+    <Lazyloader name={'home'}
+    loadingState={loading} 
     />
     <div className="home-container">
-      <Section1 />
-      <Section2 />
-      <Section3 />
-      <Section4 />
-      <Section5 />
+      <Suspense fallback={<ComponentLoader />}>
+        <Section1 />
+      </Suspense>
+      <Suspense fallback={<ComponentLoader />}>
+        <Section2 />
+      </Suspense>
+      <Suspense fallback={<ComponentLoader />}>
+        <Section3 />
+      </Suspense>
+      <Suspense fallback={<ComponentLoader />}>
+        <Section4 />
+      </Suspense>
+      <Suspense fallback={<ComponentLoader />}>
+        <Section5 />
+      </Suspense>
     </div>
   </>
   );

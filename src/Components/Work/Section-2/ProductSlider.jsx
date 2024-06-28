@@ -18,10 +18,10 @@ function ProductSlider({hoveredProduct}) {
                     spaceBetween={50}
                     slidesPerView={1}
                     pagination={{ clickable: true }}
-                    autoplay={{
-                        delay: 3000,
-                        disableOnInteraction: false,
-                      }}
+                    // autoplay={{
+                    //     delay: 3000,
+                    //     disableOnInteraction: false,
+                    //   }}
                 >
                     {hoveredProduct.map((item, index) =>
                         <SwiperSlide key={index}>

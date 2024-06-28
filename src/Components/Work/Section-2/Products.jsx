@@ -9,7 +9,8 @@ function Products() {
         {
             id: '1',
             title: 'Arqitel',
-            img: 'https://cdn.prod.website-files.com/6334198f239547f2fccd84c1/650c5f15978b05dc7f2ae554_14-p-1080.webp',
+            img:'aruitel2.jpeg',
+            imgSmall:'aruitel2-small.png',
             desc: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Velit, sequi vel laudantium numquam voluptas eaque maiores natus. Beatae, nemo id!',
             liveWebsite: true,
             caseStudy: false,
@@ -18,7 +19,8 @@ function Products() {
         {
             id: '2',
             title: 'Cula',
-            img: 'https://cdn.prod.website-files.com/6334198f239547f2fccd84c1/65b41324914b470b20ec7d03_Frame%203.png',
+            img:'cula2.png',
+            imgSmall:'cula2-small.png',
             desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. In ipsa neque autem itaque accusantium facilis, tempora est, fugit officia harum dolorum saepe.',
             liveWebsite: true,
             caseStudy: false,
@@ -27,7 +29,8 @@ function Products() {
         {
             id: '3',
             title: 'Layout Land',
-            img: 'https://cdn.prod.website-files.com/6334198f239547f2fccd84c1/65f1160e50447ddfb490fb59_portfolioCard_cc-02%20(1)-p-1080.webp',
+            img:'webflow2.png',
+            imgSmall:'webflow-small.png',
             desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos velit magnam ex veritatis harum non?',
             liveWebsite: true,
             caseStudy: false,
@@ -36,7 +39,8 @@ function Products() {
         {
             id: '4',
             title: 'TTR',
-            img: 'https://cdn.prod.website-files.com/6334198f239547f2fccd84c1/64cd6ecc885579ba1b4ffc97_10-p-1080.jpg',
+            img:'refokus2.jpg',
+            imgSmall:'refokus2-small.png',
             desc: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cum doloribus amet similique ratione explicabo id velit ea totam perferendis!',
             liveWebsite: true,
             caseStudy: true,
@@ -45,7 +49,8 @@ function Products() {
         {
             id: '5',
             title: 'Maniv',
-            img: 'https://cdn.prod.website-files.com/6334198f239547f2fccd84c1/65b2cab86e8df24e528c4441_Frame%201.png',
+            img:'maniv2.png',
+            imgSmall:'maniv2-small.png',
             desc: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maiores quasi cumque velit possimus recusandae autem fuga non hic necessitatibus harum?',
             liveWebsite: true,
             caseStudy: true,
@@ -54,7 +59,8 @@ function Products() {
         {
             id: '6',
             title: 'Singularity',
-            img: 'https://cdn.prod.website-files.com/6334198f239547f2fccd84c1/65b2cab86e8df24e528c4441_Frame%201.png',
+            img:'singularity.png',
+            imgSmall:'singularity-small.png',
             desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia, eius consequuntur!',
             liveWebsite: true,
             caseStudy: true,
@@ -63,7 +69,8 @@ function Products() {
         {
             id: '7',
             title: 'Like Magic',
-            img: 'https://cdn.prod.website-files.com/6334198f239547f2fccd84c1/65b41bfccf2d0e77e130b210_Like%20Magic%20-%20mobile-p-1080.png',
+            img:'magic.png',
+            imgSmall:'magic-small.png',
             desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam laboriosam harum corrupti nulla delectus voluptate excepturi, accusamus exercitationem?',
             liveWebsite: true,
             caseStudy: false,
@@ -72,7 +79,8 @@ function Products() {
         {
             id: '8',
             title: 'Silvr',
-            img: 'https://cdn.prod.website-files.com/6334198f239547f2fccd84c1/64cc29f66c6594c072ba1a38_02-p-1080.jpg',
+            img:'silvr2.jpg',
+            imgSmall:'silvr2-small.png',
             desc: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Totam quis similique placeat sed optio delectus!',
             liveWebsite: true,
             caseStudy: false,
@@ -81,7 +89,8 @@ function Products() {
         {
             id: '9',
             title: 'Rainfall',
-            img: 'https://cdn.prod.website-files.com/6334198f239547f2fccd84c1/64cc2f1683a983fb66bd96c4_8-p-1080.jpg',
+            img:'rainfall.jpg',
+            imgSmall:'rainfall-small.png',
             desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse, magnam earum cumque doloremque a dignissimos voluptate quos libero blanditiis quod?',
             liveWebsite: true,
             caseStudy: true,
@@ -90,7 +99,8 @@ function Products() {
         {
             id: '10',
             title: 'Intenseye',
-            img: 'https://cdn.prod.website-files.com/6334198f239547f2fccd84c1/64cc2e2943eeaaaf5d8961a7_6-p-1080.jpg',
+            img:'intenseye.jpg',
+            imgSmall:'intenseye-small.png',
             desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas nemo, eos nihil aut consectetur iste?',
             liveWebsite: true,
             caseStudy: false,
@@ -99,7 +109,8 @@ function Products() {
         {
             id: '11',
             title: 'Remind',
-            img: 'https://cdn.prod.website-files.com/6334198f239547f2fccd84c1/64cc2cad43eeaaaf5d87b274_4-p-1080.jpg',
+            img:'remind.png',
+            imgSmall:'remind-small.png',
             desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque iusto, nam quia molestiae doloribus error deleniti sed.',
             liveWebsite: true,
             caseStudy: false,
@@ -108,7 +119,8 @@ function Products() {
         {
             id: '12',
             title: 'Summon',
-            img: 'https://cdn.prod.website-files.com/6334198f239547f2fccd84c1/65b41c585b32416434291359_Summon%20-%20mobile-p-1080.png',
+            img:'summon.png',
+            imgSmall:'summon-small.png',
             desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit fuga et quos quidem soluta assumenda vitae consectetur, cum nesciunt.',
             liveWebsite: true,
             caseStudy: true,

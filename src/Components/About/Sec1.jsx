@@ -2,18 +2,19 @@ import React, { useRef } from 'react'
 import gsap from 'gsap/all';
 import { useGSAP } from '@gsap/react'
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import ImageBlurhash from '../../utils/ImageBlurhash/ImageBlurhash';
 
 gsap.registerPlugin(ScrollTrigger);
 
 function Sec1() {
     const gridItems = [
-        { className: 'grid-item-1', img: 'https://cdn.prod.website-files.com/6334198f239547d0f9cd84b3/65493e5d5a9929dadf061012_Rectangle%252015013-p-500.png' },
-        { className: 'grid-item-2', img: 'https://cdn.prod.website-files.com/6334198f239547d0f9cd84b3/65493e5d5a9929dadf061020_Rectangle%252015001-p-500.png' },
-        { className: 'grid-item-3', img: 'https://cdn.prod.website-files.com/6334198f239547d0f9cd84b3/65493e5d5a9929dadf061026_Rectangle%252015000-p-500.png' },
-        { className: 'grid-item-4', img: 'https://cdn.prod.website-files.com/6334198f239547d0f9cd84b3/65493e5d5a9929dadf06102f_Rectangle%252015007-p-500.png' },
-        { className: 'grid-item-5', img: 'https://cdn.prod.website-files.com/6334198f239547d0f9cd84b3/65493e5d5a9929dadf061023_Rectangle%252015008%2520(1)-p-500.png' },
-        { className: 'grid-item-6', img: 'https://cdn.prod.website-files.com/6334198f239547d0f9cd84b3/65493e5d5a9929dadf06102c_Rectangle%252015019-p-500.png' },
-        { className: 'grid-item-7', img: 'https://cdn.prod.website-files.com/6334198f239547d0f9cd84b3/65493e5d5a9929dadf061016_Rectangle%252015009%2520(1)-p-500.png' },
+        { className: 'grid-item-1', img: 'about1.png',imgSmall: 'about1-small.png'},
+        { className: 'grid-item-2', img: 'about2.png',imgSmall: 'about2-small.png'},
+        { className: 'grid-item-3', img: 'about3.png',imgSmall: 'about3-small.png'},
+        { className: 'grid-item-4', img: 'about4.png',imgSmall: 'about4-small.png'},
+        { className: 'grid-item-5', img: 'about5.png',imgSmall: 'about5-small.png'},
+        { className: 'grid-item-6', img: 'about6.png',imgSmall: 'about6-small.png'},
+        { className: 'grid-item-7', img: 'about7.png',imgSmall: 'about7-small.png'},
     ]
     const containerRef = useRef(null);
     useGSAP(()=>{
@@ -49,7 +50,10 @@ function Sec1() {
                     {gridItems.map((item, index) => (
                         <div className={'grid-item ' + item.className} key={index}>
                             <div className="item-img">
-                                <img src={item.img} alt="" />
+                            <ImageBlurhash src={item.img} alt={'alt'}
+                                srcSmall={item.imgSmall} 
+                            />
+                                {/* <img src={item.img} alt="" /> */}
                             </div>
                         </div>
                     ))}

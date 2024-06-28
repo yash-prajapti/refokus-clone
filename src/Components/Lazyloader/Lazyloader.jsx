@@ -5,7 +5,7 @@ import gsap from 'gsap';
 import { RingLoader } from 'react-spinners';
 import { useGSAP } from '@gsap/react';
 
-function Lazyloader({ name }) {
+function Lazyloader({ name,loadingState }) {
     useGSAP(() => {
         let Tl = gsap.timeline();
         Tl.to('.loader-container', {
@@ -21,8 +21,8 @@ function Lazyloader({ name }) {
         // if (!loadingState) {
         //     Tl.to('.loader-container', {
         //         top: '-100%',
-        //         delay: 1,
-        //         duration: 1,
+        //         delay: 1.5,
+        //     duration: 1.5,
         //         ease: "expo.inOut",
         //     });
         // }

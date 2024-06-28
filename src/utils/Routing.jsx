@@ -1,52 +1,63 @@
-import React, { Suspense, lazy } from 'react'
-import { Route, Routes } from 'react-router-dom'
-import Lazyloader from '../Components/Lazyloader/Lazyloader'
-import ScrollToTop from './ScrollToTop'
-const Home = lazy(() => import('../Components/Home/Home'))
-const Work = lazy(() => import('../Components/Work/Work'))
-const About = lazy(() => import('../Components/About/About'))
-const News = lazy(() => import('../Components/News/News'))
+import React, { Suspense, lazy } from 'react';
+import { Route, Routes } from 'react-router-dom';
+import LazyloaderSus from '../Components/Lazyloader/LazyloaderSus';
+import ScrollToTop from './ScrollToTop';
+import RouteErrorFallback from './RouteErrorFallback/RouteErrorFallback';
+import ErrorBoundary from './ErrorBoundary/ErrorBoundary';
+
+const Home = lazy(() => import('../Components/Home/Home'));
+const Work = lazy(() => import('../Components/Work/Work'));
+const About = lazy(() => import('../Components/About/About'));
+const News = lazy(() => import('../Components/News/News'));
 
 function Routing() {
   return (
     <>
-    <ScrollToTop />
+      <ScrollToTop />
       <Routes>
         <Route
           path="/"
           element={
-            <Suspense fallback={<Lazyloader name="home" />}>
-              <Home />
-            </Suspense>
+            <ErrorBoundary fallback={<RouteErrorFallback />}>
+              <Suspense fallback={<LazyloaderSus name="home" />}>
+                <Home />
+              </Suspense>
+            </ErrorBoundary>
           }
         />
         <Route
           path="/work"
           element={
-            <Suspense fallback={<Lazyloader name="work" />}>
-              <Work />
-            </Suspense>
+            <ErrorBoundary fallback={<RouteErrorFallback />}>
+              <Suspense fallback={<LazyloaderSus name="work" />}>
+                <Work />
+              </Suspense>
+            </ErrorBoundary>
           }
         />
         <Route
           path="/about"
           element={
-            <Suspense fallback={<Lazyloader name="about" />}>
-              <About />
-            </Suspense>
+            <ErrorBoundary fallback={<RouteErrorFallback />}>
+              <Suspense fallback={<LazyloaderSus name="about" />}>
+                <About />
+              </Suspense>
+            </ErrorBoundary>
           }
         />
         <Route
           path="/news"
           element={
-            <Suspense fallback={<Lazyloader name="news" />}>
-              <News />
-            </Suspense>
+            <ErrorBoundary fallback={<RouteErrorFallback />}>
+              <Suspense fallback={<LazyloaderSus name="news" />}>
+                <News />
+              </Suspense>
+            </ErrorBoundary>
           }
         />
       </Routes>
     </>
-  )
+  );
 }
 
-export default Routing
+export default Routing;

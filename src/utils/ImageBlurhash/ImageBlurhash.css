@@ -1,0 +1,19 @@
+.blur-image::before{
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-color: rgba(255, 255, 255, 0.091);
+    animation: pulse 2s infinite ease-in-out;
+}
+
+@keyframes pulse {
+    0% {
+        background-color: rgba(255, 255, 255, 0);
+    }
+    50% {
+        background-color: rgba(255, 255, 255, 0.091);
+    }
+    100% {
+        background-color: rgba(255, 255, 255, 0);
+    }
+}

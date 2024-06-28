@@ -1,14 +1,17 @@
 import React from 'react'
 import AnimaBtn from '../../Button/AnimaBtn'
+import ImageBlurhash from '../../../utils/ImageBlurhash/ImageBlurhash'
 
-function SlideProduct({item}) {
+function SlideProduct({ item }) {
     return (
         <div className="product-slide">
             <div className="slide-title">
                 <h1>{item.title}</h1>
             </div>
             <div className="slide-img">
-                <img src={item.img} alt="" />
+                <ImageBlurhash src={item.img} alt={'alt'}
+                    srcSmall={item.imgSmall}
+                />
             </div>
             <div className="slide-desc">
                 <p>{item.desc}</p>

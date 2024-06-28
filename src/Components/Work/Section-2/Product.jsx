@@ -1,7 +1,8 @@
 import React from 'react'
 import AnimaBtn from '../../Button/AnimaBtn';
+import ImageBlurhash from '../../../utils/ImageBlurhash/ImageBlurhash';
 
-function Product({item,index,setHoveredProduct,hoveredProduct}) {
+function Product({ item, index, setHoveredProduct, hoveredProduct }) {
     const mouseEnter = (productIndex) => {
         setHoveredProduct(hoveredProduct.map((ite, ind) => {
             if (ind === productIndex) {
@@ -24,14 +25,9 @@ function Product({item,index,setHoveredProduct,hoveredProduct}) {
                 </div>
                 <div className={`product-video-container ${item.hover ? 'hovered' : ''}`}>
                     <div className="product-video">
-                        {/* <video
-                            // {...(item.hover && { autoPlay: true, playsInline: true })}
-                            muted autoPlay playsInline
-                            loop width="100%" loading='lazy'>
-                            {item.video && <source src={item.video} type={item.videoType} />}
-                            Your browser does not support the video tag.
-                        </video> */}
-                        <img src={item.img} alt="" />
+                        <ImageBlurhash src={item.img} alt={'alt'}
+                            srcSmall={item.imgSmall}
+                        />
                     </div>
                 </div>
                 <div className="product-desc">

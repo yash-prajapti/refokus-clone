@@ -5,7 +5,7 @@ import Lazyloader from '../Lazyloader/Lazyloader'
 function News() {
   return (
     <>
-    <Lazyloader name={'news'}/>
+    <Lazyloader name={'news'} loadingState={true}/>
       <div className="news-container">
         <div className="news-section-01">
           <div className="news-title">

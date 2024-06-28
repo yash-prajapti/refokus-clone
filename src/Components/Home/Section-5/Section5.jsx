@@ -4,6 +4,8 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import AnimaBtn from '../../Button/AnimaBtn';
 import { Link } from 'react-router-dom';
 import { useGSAP } from '@gsap/react';
+import ImageBlurhash from '../../../utils/ImageBlurhash/ImageBlurhash';
+import LazyVideo from '../../Lazyloader/LazyVideo';
 gsap.registerPlugin(ScrollTrigger);
 
 function Section5() {
@@ -52,9 +54,13 @@ function Section5() {
                     <div className="ns-list-pr " >
                         <div className="ns-video-01" ref={parallaxItem1}>
                             <div className='ns-video'>
-                                <video muted loop autoPlay playsInline width="100%" loading='lazy'>
-                                    <source src='people-short.mp4' type='video/mp4' />
-                                </video>
+                            <LazyVideo
+                                    src={'people-short.mp4'}
+                                    type={'video/mp4'}
+                                    poster={'pe.png'}
+                                    width="100%"
+                                    height="100%"
+                                />
                             </div>
                             <div className='ns-video-desc'>
                                 <p>Refokus 2022 Offsite: Where Work Meets Play, Innovation, and Homemade Pasta.</p>
@@ -62,7 +68,9 @@ function Section5() {
                         </div>
                         <div className="ns-img-02 " ref={parallaxItem2}>
                             <div className="ns-img">
-                                <img src="ns2.jpg" alt="ns" />
+                                <ImageBlurhash src={'ns2.jpg'} alt={'ns'}
+                                    srcSmall={'ns2-small.png'}
+                                />
                             </div>
                             <div className="ns-desc">
                                 <p>Why Refokus is the Best Partner to Build Your Venture Capital Website</p>
@@ -70,7 +78,9 @@ function Section5() {
                         </div>
                         <div className="ns-img-03 " ref={parallaxItem3}>
                             <div className="ns-img">
-                                <img src="ns3.png" alt="ns" />
+                                <ImageBlurhash src={'ns3.png'} alt={'ns'}
+                                    srcSmall={'ns3-small.png'}
+                                />
                             </div>
                             <div className="ns-desc">
                                 <p>Webflow Agency Case Study of Refokus as a leading Webflow Enterprise Partner</p>
