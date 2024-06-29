@@ -67,7 +67,7 @@ function Section5() {
                             </div>
                         </div>
                         <div className="ns-img-02 " ref={parallaxItem2}>
-                            <div className="ns-img">
+                            <div className="ns-img" style={{backgroundImage:`url('ns2-small.png')`}}>
                                 <ImageBlurhash src={'ns2.jpg'} alt={'ns'}
                                     srcSmall={'ns2-small.png'}
                                 />
@@ -77,7 +77,7 @@ function Section5() {
                             </div>
                         </div>
                         <div className="ns-img-03 " ref={parallaxItem3}>
-                            <div className="ns-img">
+                            <div className="ns-img" style={{backgroundImage:`url('ns3-small.png')`}}>
                                 <ImageBlurhash src={'ns3.png'} alt={'ns'}
                                     srcSmall={'ns3-small.png'}
                                 />

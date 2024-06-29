@@ -31,7 +31,7 @@ function Home() {
 
   return (<>
     <Lazyloader name={'home'}
-    loadingState={loading} 
+    // loadingState={loading} 
     />
     <div className="home-container">
       <Suspense fallback={<ComponentLoader />}>

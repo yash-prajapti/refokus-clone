@@ -9,12 +9,12 @@ function SlideWork({ item, index }) {
             <div className="slide" style={{ backgroundColor: item.bgColor, backgroundImage: `url(${item.bgImg})` }}>
                 <div className="slides-flex">
                     <div className="slide-left">
-                        <div className="slide-cc-01">
+                        <div className="slide-cc-01" style={{backgroundImage:`url(${item.img1Small})`}}>
                             <ImageBlurhash src={item.img1} alt={item.alt}
                                 srcSmall={item.img1Small}
                             />
                         </div>
-                        <div className="slide-cc-02">
+                        <div className="slide-cc-02" style={{backgroundImage:`url(${item.img2Small})`}}>
                             <ImageBlurhash src={item.img2} alt={item.alt}
                                 srcSmall={item.img2Small}
                             />
