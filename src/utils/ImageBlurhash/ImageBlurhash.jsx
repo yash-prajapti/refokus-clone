@@ -13,7 +13,7 @@ export default function ImageBlurhash({ src, alt, srcSmall }) {
             setImageLoaded(false)
         }
         img.src = src
-    }, [src])
+    }, [])
     return (
         <>
             {!imageLoaded ?

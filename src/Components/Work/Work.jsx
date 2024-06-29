@@ -11,29 +11,29 @@ import ComponentLoader from '../Lazyloader/ComponentLoader'
 
 function Work() {
   const [loading, setLoading] = useState(true);
-  useLayoutEffect(() => {
-    const assets = {
-      images: [
-        // section 1 bg
-        'w1-small.png',
-        'w2-small.png',
-        'w3-small.png',
-        'w4-small.png',
-        'w5-small.png',
-        'w6-small.png',
-      ],
-      videos: [
-      ],
-    };
-    preloadAssets(assets).then(() => {
-      setLoading(false);
-    }).catch((error) => {
-      console.error('Failed to load assets:', error);
-    });
-  }, []);
+  // useLayoutEffect(() => {
+  //   const assets = {
+  //     images: [
+  //       // section 1 bg
+  //       'w1-small.png',
+  //       'w2-small.png',
+  //       'w3-small.png',
+  //       'w4-small.png',
+  //       'w5-small.png',
+  //       'w6-small.png',
+  //     ],
+  //     videos: [
+  //     ],
+  //   };
+  //   preloadAssets(assets).then(() => {
+  //     setLoading(false);
+  //   }).catch((error) => {
+  //     console.error('Failed to load assets:', error);
+  //   });
+  // }, []);
   return (
     <>
-      <Lazyloader name={'work'} loadingState={loading} />
+      <Lazyloader name={'work'} />
       <Suspense fallback={<ComponentLoader />}>
         <Wsection1 />
       </Suspense>
