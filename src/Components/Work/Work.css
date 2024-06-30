@@ -56,6 +56,9 @@
   border-radius: 0.5rem;
   transform: translate(-50%, -50%);
   overflow: hidden;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 /* Section 2 ----------------------------------------------------------------- */
@@ -154,6 +157,9 @@
   transform: scale(0);
   transition: transform 0.5s;
   transform-origin: top;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 .product-video-container.hovered .product-video {
   transition: transform 0.5s;
@@ -200,6 +206,9 @@
   max-height: 65vh;
   overflow: hidden;
   border-radius: 10px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 .slide-img img {
   width: 100%;

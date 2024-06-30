@@ -87,7 +87,7 @@ function Sec2() {
     <div className="horizontal-container" ref={containerRef}>
       {panels.map((item, index) => (
         <div className={`panel ${item.className}`} key={index}>
-          <div className="panel-image">
+          <div className="panel-image" style={{backgroundImage:`url(${item.imgSmall})`}}>
             <ImageBlurhash src={item.img} alt={'alt'}
               srcSmall={item.imgSmall}
             />

@@ -49,7 +49,7 @@ function Sec1() {
                 <div className="img-grid">
                     {gridItems.map((item, index) => (
                         <div className={'grid-item ' + item.className} key={index}>
-                            <div className="item-img">
+                            <div className="item-img" style={{backgroundImage:`url(${item.imgSmall})`}}>
                             <ImageBlurhash src={item.img} alt={'alt'}
                                 srcSmall={item.imgSmall} 
                             />

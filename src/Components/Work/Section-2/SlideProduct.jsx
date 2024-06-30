@@ -8,7 +8,7 @@ function SlideProduct({ item }) {
             <div className="slide-title">
                 <h1>{item.title}</h1>
             </div>
-            <div className="slide-img">
+            <div className="slide-img" style={{backgroundImage:`url(${item.imgSmall})`}}>
                 <ImageBlurhash src={item.img} alt={'alt'}
                     srcSmall={item.imgSmall}
                 />

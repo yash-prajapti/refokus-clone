@@ -144,7 +144,7 @@ const Wsection1 = () => {
                             item.isActive && (
                                 <div className="image"
                                     key={index}
-                                    style={{ top: item.top, left: item.left }}
+                                    style={{ top: item.top, left: item.left,backgroundImage:`url(${item.imgSmall})` }}
                                 >
                                     <ImageBlurhash className='image' src={item.img} alt={'alt'}
                                         srcSmall={item.imgSmall} key={index} />

@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import './ImageBlurhash.css';
 
 export default function ImageBlurhash({ src, alt, srcSmall }) {
-    const [imageLoaded, setImageLoaded] = useState(true);
+    const [imageLoaded, setImageLoaded] = useState(false);
 
     useEffect(() => {
         const img = new Image()

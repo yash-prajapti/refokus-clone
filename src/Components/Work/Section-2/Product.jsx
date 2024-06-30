@@ -24,7 +24,7 @@ function Product({ item, index, setHoveredProduct, hoveredProduct }) {
                     <h1>{item.title}</h1>
                 </div>
                 <div className={`product-video-container ${item.hover ? 'hovered' : ''}`}>
-                    <div className="product-video">
+                    <div className="product-video" style={{backgroundImage:`url(${item.imgSmall})`}}>
                         <ImageBlurhash src={item.img} alt={'alt'}
                             srcSmall={item.imgSmall}
                         />
